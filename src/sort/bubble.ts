@@ -1,4 +1,4 @@
-import {exchange, less} from "./utils.ts";
+import { exchange, less } from "./utils.ts";
 
 export function bubbleSort<T>(data: T[]): T[] {
   const array = data.slice();
