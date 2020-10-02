@@ -8,19 +8,22 @@ function init() {
   return { array, actual: result };
 }
 
-Deno.test({
-  name: "Bubble Sort",
-  fn: () => {
-    const { array, actual } = init();
-    const result = bubbleSort(array);
-    assertEquals(result, actual);
-  },
-});
-Deno.test({
-  name: "Insert Sort",
-  fn: () => {
-    const { array, actual } = init();
-    const result = insertSort(array);
-    assertEquals(result, actual);
-  },
-});
+interface Sort<T> {
+  name: string;
+  fn: (data: T[]) => T[];
+}
+
+const sorts: Sort<number>[] = [
+  { name: "Bubble Sort", fn: bubbleSort },
+  { name: "Insert Sort", fn: insertSort },
+];
+for (const sort of sorts) {
+  Deno.test({
+    name: sort.name,
+    fn: () => {
+      const { array, actual } = init();
+      const result = sort.fn(array);
+      assertEquals(result, actual);
+    },
+  });
+}
