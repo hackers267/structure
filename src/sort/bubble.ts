@@ -1,3 +1,5 @@
+import {exchange, less} from "./utils.ts";
+
 export function bubbleSort<T>(data: T[]): T[] {
   const array = data.slice();
   let hasChanged = true;
@@ -12,12 +14,4 @@ export function bubbleSort<T>(data: T[]): T[] {
     }
   }
   return array;
-  function exchange(array: T[], i: number, j: number) {
-    let temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-  function less(array: T[], i: number, j: number) {
-    return array[i] < array[j];
-  }
 }
