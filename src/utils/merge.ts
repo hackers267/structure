@@ -24,6 +24,5 @@ export function merge<T>(leftArray: T[], rightArray: T[]): T[] {
       rQueue.dequeue();
     }
   }
-  console.log(result);
   return result;
 }
