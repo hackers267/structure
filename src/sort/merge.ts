@@ -14,4 +14,3 @@ export function mergeSort<T>(
   const rightArray = mergeSort(result, mid, right);
   return merge(leftArray, rightArray);
 }
-mergeSort([2, 12, 19, 8, 4, 3]);
