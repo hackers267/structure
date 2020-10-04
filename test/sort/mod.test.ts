@@ -2,6 +2,7 @@ import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
 import { bubbleSort } from "../../src/sort/bubble.ts";
 import { insertSort } from "../../src/sort/insert.ts";
 import { mergeSort } from "../../src/sort/merge.ts";
+import { quickSort } from "../../src/sort/quick.ts";
 
 function init() {
   const array: number[] = [2, 12, 19, 8, 4, 3];
@@ -18,6 +19,7 @@ const sorts: Sort<number>[] = [
   { name: "Bubble Sort", fn: bubbleSort },
   { name: "Insert Sort", fn: insertSort },
   { name: "Merge Sort", fn: mergeSort },
+  { name: "Quick Sort", fn: quickSort },
 ];
 for (const sort of sorts) {
   Deno.test({
