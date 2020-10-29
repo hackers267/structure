@@ -18,3 +18,4 @@ deno test
 - insert 插入排序
 - merge 归并排序
 - quick 快速排序
+- maxPQ 优先队列

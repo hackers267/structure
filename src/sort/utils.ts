@@ -7,7 +7,4 @@ function exchange<T>(array: T[], i: number, j: number) {
 function less<T>(array: T[], i: number, j: number) {
   return array[i] < array[j];
 }
-export {
-  less,
-  exchange,
-};
+export { exchange, less };
