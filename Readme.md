@@ -12,9 +12,9 @@ deno test
 
 ## 算法部分
 
-### 内容
+### sort 排序
 
-- sort 排序
-  - bubble 冒泡排序
-  - insert 插入排序
-  - merge 归并排序
+- bubble 冒泡排序
+- insert 插入排序
+- merge 归并排序
+- quick 快速排序
